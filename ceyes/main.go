@@ -106,7 +106,11 @@ func MergeMap(mObj ...map[string]string) map[string]string {
 	newObj := map[string]string{}
 	for _, m := range mObj {
 		for k, v := range m {
-			newObj[k] = v
+			if _, ok := newObj[k]; ok {
+				fmt.Println("key already exists")
+			} else {
+				newObj[k] = v
+			}
 		}
 	}
 	return newObj
